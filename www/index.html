@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clouds Can Speak Radio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/app.min.css">
+    <style>
+      /* TODO */
+    </style>  
+
+  </head>
+
+  <body>
+
+    <script>
+    function there() {
+      alert ("there");
+    }
+
+    </script>
+
+    <div class="app-page" data-page="main_page">
+      <div class="app-topbar">
+        <div class="app-title"><span class="app-icon"></span>Clouds Can Speak Radio</div>
+      	</div>
+      	<div class="app-content">
+      	 
+         <div class="app-section">
+            <div id="trackID"></div>
+          </div>
+
+          <div class="app-section">
+            <div id="locationID"></div>
+          </div>
+      	
+        <div class="app-section">
+          <div id="trackID_button">
+      	     <div class="app-button">Get Track ID</div>
+          </div> 
+          <div id="locationID_button">
+            <div class="app-button">Get My Location</div>
+          </div>
+      	</div>
+      	</div>
+    </div>
+<!--
+    <div class="app-page" data-page="facebook_sing_in_page">
+      <div class="app-topbar fbcolour">
+        <div class="app-title"><span class="app-icon"></span>Sign in with facebook account</div>
+        <div class="right app-button app-menu">Back</div>
+      	</div>
+      	<div class="app-content">
+          <div class="app-section">
+            <div id ="sign_in_fb_button"> 
+              <div class="app-button">Get access to my dashboard</div>
+            </div>
+          </div>
+    </div>
+-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/app.min.js"></script>
+        <script type="text/javascript" src="js/zepto.js"></script>
+        <script type="text/javascript" src="js/gettrackid.js"></script>
+        <script type="text/javascript" src="js/getlocationid.js"></script>
+        <script type="text/javascript" 
+          src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAK2Gm45lwP1xs45xMuYK1eH9Vpc9XO21c&language=en&sensor=true">
+        </script>
+        <script>
+          document.addEventListener(
+            "load",
+            function()
+              {
+              
+            },
+            true);
+        </script>
+
+
+    <script>
+      App.controller('main_page', function (page) {
+        $(page).find('#trackID_button')
+          .on('click',function(){
+            getTrackID();
+          })
+
+        $(page).find('#locationID_button')
+          .on('click', function(){
+            getLocationID();
+          })
+      });
+
+      App.controller('facebook_sing_in_page', function (page) {
+        $(page).find('.app-menu')
+          .on('click', function (){
+            App.dialog({
+              doButton     : 'Go to Welcome Hub Center' ,
+              cancelButton : 'Cancel'
+            }, function (choice) {
+              switch(choice) {
+                case 'do':
+                App.load('sign_in_page');
+                break;
+              }
+              console.log(choice);
+            });
+          });
+        $(page)
+          .find('#sign_in_fb_button')
+          .on('click', function() {
+            alert('begin execute status request');
+            FB.getLoginStatus(function(response) {
+              var fb_log_status = response.status;
+              if (response.status === 'connected') {
+                // the user is logged in and has authenticated your
+                // app, and response.authResponse supplies
+                // the user's ID, a valid access token, a signed
+                // request, and the time the access token 
+                // and signed request each expire
+                var uid = response.authResponse.userID;
+                var accessToken = response.authResponse.accessToken;
+              } else if (response.status === 'not_authorized') {
+                // the user is logged in to Facebook, 
+                // but has not authenticated your app
+              } else {
+                // the user isn't logged in to Facebook.
+                }
+            });
+          });
+      });
+
+      try {
+        App.restore();
+      } catch (err) {
+
+        App.load('main_page');
+      }
+    </script>
+  </body>
+</html>

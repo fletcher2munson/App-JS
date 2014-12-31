@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+* @file index.html
+*
+* Template application that shows examples of how to access
+* device services from JavaScript using the Wormhole library.
+*LATEST APP
+-->
+<html>
+	<head>
+		<meta name="viewport" content="width=320, user-scalable=no">
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="width=device-width,
+ 								   initial-scale=1.0,
+                                   maximum-scale=1.0,
+                                   user-scalable=no,
+                                   minimal-ui">
+		<title>Notification Hub Center</title>
+		<link rel="stylesheet" href="css/app.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>	
+
+	<body>
+		
+		<div class="app-page" data-page="home">
+			<div class="app-topbar">
+				<div class="app-title"><span class="app-icon"></span>Notification Hub Center</div>
+			</div>
+			<div class="app-content">
+				<p class="app-section">Welcome to your private notifications Hub. You can check your existing subscriptions, add new or unsubscribe boring ones. Manage it easily!</p>
+			
+				<div class="app-section">
+					<div class="app-button" onclick="initial()">Alert window</div>
+					<div class="app-button" onclick="initial()">Check your subscriptions</div>
+					<div class="app-button" onclick="initial()">Add subscription</div>
+					<div class="app-button" onclick="initial()">Unsubscribe</div>
+				</div>
+			</div>
+		</div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/app.min.js"></script>
+        <script type="text/javascript" src="js/zepto.js"></script>
+        <script type="text/javascript" src="js/button_pressed.js"></script>
+	</body>
+</html>
