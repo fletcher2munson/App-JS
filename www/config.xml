@@ -61,7 +61,8 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-        <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
+    <gap:plugin name="com.ququplay.websocket.websocket" version="0.1.0" />
+    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
         <param name="APP_ID" value="899442920073471" />
         <param name="APP_NAME" value="HUB Noti­f­i­c­a­tion App" />
     </gap:plugin>
