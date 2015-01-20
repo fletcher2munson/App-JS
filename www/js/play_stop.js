@@ -7,8 +7,11 @@ function play_stop_function(){
         // error callback
         function (err) {
             console.log("playAudio():Audio Error: " + err);
+        },
+        function (stat) {
+            alert(stat);
         }
     );
     // Play audio
-    my_media.play();
+    my_media.play({playAudioWhenScreenIsLocked : false });
 }
