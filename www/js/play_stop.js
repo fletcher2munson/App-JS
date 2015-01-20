@@ -9,10 +9,10 @@ function play_stop_function(){
             console.log("playAudio():Audio Error: " + err);
         },
         function (stat) {
-            if (status == 1) {
+            if (stat == 1) {
                 document.getElementById("play_stop_button").innerHTML = "Buffering";
             }
-            if (status == 2) {
+            if (stat == 2) {
                 document.getElementById("play_stop_button").innerHTML = "Streaming";
             }
         }
