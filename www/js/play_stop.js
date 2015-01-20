@@ -9,7 +9,12 @@ function play_stop_function(){
             console.log("playAudio():Audio Error: " + err);
         },
         function (stat) {
-            alert(stat);
+            if (status == 1) {
+                document.getElementById("play_stop_button").innerHTML = "Buffering";
+            }
+            if (status == 2) {
+                document.getElementById("play_stop_button").innerHTML = "Streaming";
+            }
         }
     );
     // Play audio
