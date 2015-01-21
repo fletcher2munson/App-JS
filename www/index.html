@@ -71,13 +71,14 @@
           src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAK2Gm45lwP1xs45xMuYK1eH9Vpc9XO21c&language=en&sensor=true">
         </script>
         <script>
-          document.addEventListener(
-            "load",
-            function()
-              {
+<script type="text/javascript">
+            document.addEventListener("deviceready", initial, false);
+
+            function initial() {
               getLocationID();
-            },
-            true);
+              getTrackID();
+            }
+        </script>
         </script>
 
 
