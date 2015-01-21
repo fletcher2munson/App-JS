@@ -78,23 +78,12 @@
         </script>
 
         <script>
-        var url_media = new Media ('http://cloudscanspeak.net:8000/clouds',
-        function () {
-            console.log("playAudio():Audio Success");
-        },
-        // error callback
-        function (err) {
-            console.log("playAudio():Audio Error: " + err);
-        },
-        function (stat) {
-            if (stat == 1) {
-               document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Buffering</div>';
-            }
-            if (stat == 2) {
-                document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Stop</div>';
-            }
-          });
-          
+          var my_media = new Media('http://cloudscanspeak.net:8000/clouds',
+          // success callback
+          function () { console.log("playAudio():Audio Success"); },
+          // error callback
+          function (err) { console.log("playAudio():Audio Error: " + err); }
+          );
           var clicked = 0;
 
           App.controller('main_page', function (page) {
@@ -111,11 +100,9 @@
               .on('click', function(){
                 if (clicked == 0) {
                   clicked = 1;
-                  url_media.play({playAudioWhenScreenIsLocked : false });
                 }
                 if (clicked == 1) {
                   clicked = 0;
-                  url_media.stop();
                 }
             })
           });
