@@ -17,5 +17,4 @@ function load_url() {
             }
         }
     );
-    return url_media;
 }
