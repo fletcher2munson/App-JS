@@ -10,7 +10,7 @@ function play_stop_function(){
         },
         function (stat) {
             if (stat == 1) {
-                document.getElementById("play_stop_button").innerHTML = "Buffering";
+                document.getElementById("play_stop_button").innerHTML = <div class="app-button">Buffering</div>;
             }
             if (stat == 2) {
                 document.getElementById("play_stop_button").innerHTML = "Streaming";
