@@ -1,4 +1,4 @@
-function load_url() {
+function load_url(url_media) {
 
     url_media = new Media('http://cloudscanspeak.net:8000/clouds',
         function () {
@@ -17,4 +17,5 @@ function load_url() {
             }
         }
     );
+    return url_media;
 }
