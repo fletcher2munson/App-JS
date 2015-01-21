@@ -66,6 +66,7 @@
         <script type="text/javascript" src="js/zepto.js"></script>
         <script type="text/javascript" src="js/gettrackid.js"></script>
         <script type="text/javascript" src="js/getlocationid.js"></script>
+        <script type="text/javascript" src="js/play_stop.js"></script>
         <script type="text/javascript" 
           src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAK2Gm45lwP1xs45xMuYK1eH9Vpc9XO21c&language=en&sensor=true">
         </script>
@@ -78,14 +79,6 @@
         </script>
 
         <script>
-          var my_media = new Media('http://cloudscanspeak.net:8000/clouds',
-          // success callback
-          function () { console.log("playAudio():Audio Success"); },
-          // error callback
-          function (err) { console.log("playAudio():Audio Error: " + err); }
-          );
-          var clicked = 0;
-
           App.controller('main_page', function (page) {
             $(page).find('#trackID_button')
               .on('click',function(){
@@ -98,12 +91,7 @@
               })
             $(page).find('#play_stop_button')
               .on('click', function(){
-                if (clicked == 0) {
-                  clicked = 1;
-                }
-                if (clicked == 1) {
-                  clicked = 0;
-                }
+                play_stop_function();
             })
           });
 
