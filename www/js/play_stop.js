@@ -13,7 +13,7 @@ var my_media = new Media('http://cloudscanspeak.net:8000/clouds',
                 document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Buffering</div>';
             }
             if (stat == 2) {
-                document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Buffering</div>';
+                document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Streaming</div>';
             }
         }
     );
