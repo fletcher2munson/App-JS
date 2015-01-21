@@ -1,4 +1,5 @@
 function load_url() {
+
     url_media = new Media('http://cloudscanspeak.net:8000/clouds',
         function () {
             console.log("playAudio():Audio Success");
@@ -9,7 +10,7 @@ function load_url() {
         },
         function (stat) {
             if (stat == 1) {
-                document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Buffering</div>';
+               document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Buffering</div>';
             }
             if (stat == 2) {
                 document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Stop</div>';
