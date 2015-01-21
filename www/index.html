@@ -66,7 +66,6 @@
         <script type="text/javascript" src="js/zepto.js"></script>
         <script type="text/javascript" src="js/gettrackid.js"></script>
         <script type="text/javascript" src="js/getlocationid.js"></script>
-        <script type="text/javascript" src="js/play_stop.js"></script>
         <script type="text/javascript" 
           src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAK2Gm45lwP1xs45xMuYK1eH9Vpc9XO21c&language=en&sensor=true">
         </script>
@@ -79,7 +78,7 @@
         </script>
 
         <script>
-        url_media = new Media('http://cloudscanspeak.net:8000/clouds',
+        var url_media = new Media ('http://cloudscanspeak.net:8000/clouds',
         function () {
             console.log("playAudio():Audio Success");
         },
@@ -95,6 +94,7 @@
                 document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Stop</div>';
             }
           });
+          
           var clicked = 0;
 
           App.controller('main_page', function (page) {
