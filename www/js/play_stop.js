@@ -1,6 +1,6 @@
 
-function play_stop_function(){
-    var my_media = new Media('http://cloudscanspeak.net:8000/clouds',
+
+var my_media = new Media('http://cloudscanspeak.net:8000/clouds',
         function () {
             console.log("playAudio():Audio Success");
         },
@@ -13,10 +13,13 @@ function play_stop_function(){
                 document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Buffering</div>';
             }
             if (stat == 2) {
-                document.getElementById("play_stop_button").innerHTML = "Streaming";
+                document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Buffering</div>';
             }
         }
     );
+
+function play_stop_function(){
     // Play audio
     my_media.play({playAudioWhenScreenIsLocked : false });
 }
+
