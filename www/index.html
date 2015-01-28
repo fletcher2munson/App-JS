@@ -76,10 +76,13 @@
               getLocationID();
               getTrackID();
               load_media();
+              var stream_stat;
+              var my_media;
             }
         </script>
 
         <script>
+          var stream_stat;
           App.controller('main_page', function (page) {
             $(page).find('#trackID_button')
               .on('click',function(){
