@@ -75,6 +75,7 @@
             function initial() {
               getLocationID();
               getTrackID();
+              load_media();
             }
         </script>
 
@@ -91,7 +92,7 @@
               })
             $(page).find('#play_stop_button')
               .on('click', function(){
-                play_stop_function();
+                play_stop();
             })
           });
 
