@@ -34,7 +34,6 @@ function load_media(){
             }
         }
     );
-    return my_media;
     // Play audio
 }
 
