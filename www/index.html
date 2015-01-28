@@ -44,8 +44,11 @@
           <div id="locationID_button">
             <div class="app-button">Get My Location</div>
           </div>
-          <div id="play_stop_button">
+          <div id="play_button">
             <div class="app-button">Play</div>
+          </div>
+          <div id="stop_button">
+            <div class="app-button">Stop</div>
           </div>
       	</div>
       	</div>
@@ -97,9 +100,13 @@
               .on('click', function(){
                 getLocationID();
               })
-            $(page).find('#play_stop_button')
+            $(page).find('#play_button')
               .on('click', function(){
-                play_stop();
+                start_playing();
+            })
+            $(page).find('#stop_button')
+              .on('click', function(){
+                stop_playing();
             })
           });
 
