@@ -20,6 +20,5 @@ function play_stop_function(){
         }
     );
     // Play audio
-    my_media.play({playAudioWhenScreenIsLocked : false });
 }
 
