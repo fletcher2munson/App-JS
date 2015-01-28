@@ -34,16 +34,13 @@ function load_media(my_media){
             }
         }
     );
-    return my_media;
 }
 
 function start_playing(my_media) {
     my_media.play();
-    return my_media;
 }
 
 function stop_playing(my_media) {
     my_media.stop();
-    return my_media;
 }
 
