@@ -1,6 +1,6 @@
 
 
-function load_media(my_media){
+function load_media(){
 
     my_media = new Media('http://cloudscanspeak.net:8000/clouds',
         function () {
@@ -34,13 +34,14 @@ function load_media(my_media){
             }
         }
     );
-}
-
-function start_playing(my_media) {
     my_media.play();
 }
 
-function stop_playing(my_media) {
+function start_playing() {
+    my_media.play();
+}
+
+function stop_playing() {
     my_media.stop();
 }
 

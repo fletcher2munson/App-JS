@@ -84,7 +84,7 @@
               var my_media;
               getLocationID();
               getTrackID();
-              load_media(my_media);
+              load_media();
             }
         </script>
 
@@ -102,11 +102,11 @@
               })
             $(page).find('#play_button')
               .on('click', function(){
-                start_playing(my_media);
+                start_playing();
             })
             $(page).find('#stop_button')
               .on('click', function(){
-                stop_playing(my_media);
+                stop_playing();
             })
           });
 
