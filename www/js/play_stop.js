@@ -26,6 +26,8 @@ function load_media(){
 
 function play_stop() {
 alert(stream_stat);
-my_media.play();
+if (stream_stat == 4) my_media.stop();
+else my_media.play();
+
 }
 
