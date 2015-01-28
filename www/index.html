@@ -80,11 +80,11 @@
         <script type="text/javascript">
             document.addEventListener("deviceready", initial, false);
             function initial() {
-              getLocationID();
-              getTrackID();
-              load_media();
               var stream_stat;
               var my_media;
+              getLocationID();
+              getTrackID();
+              load_media(my_media);
             }
         </script>
 
@@ -102,11 +102,11 @@
               })
             $(page).find('#play_button')
               .on('click', function(){
-                start_playing();
+                start_playing(my_media);
             })
             $(page).find('#stop_button')
               .on('click', function(){
-                stop_playing();
+                stop_playing(my_media);
             })
           });
 
