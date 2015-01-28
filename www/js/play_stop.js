@@ -19,12 +19,16 @@ function load_media(){
             }
         }
     );
-    return my_media;
+    var my_media_arr = new Array(my_media,stat);
+    return my_media_arr;
     // Play audio
 }
 
 function play_stop() {
-var play_media = load_media();
-play_media.play();
+var arr_my_media = new Array();
+arr_my_media = load_media();
+var media_content = arr_my_media[0];
+var stat = arr_my_media[1];
+media_content.play();
 }
 
