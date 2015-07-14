@@ -15,7 +15,6 @@ function load_media(){
                 stream_stat=stat;
             //    document.getElementById("play_stop_button").innerHTML = '<div class="app-button">Buffering</div>';
                 document.getElementById("stream_status_monitor").innerHTML = "Starting";
-
             }
             if (stat == 2) {
                 stream_stat=stat;
